@@ -5,6 +5,7 @@ from .settings import Base
 
 #relations
 from .login_user_history import LoginUser
+from .schedule import ScheduleUser
 
 
 class User(Base):
@@ -19,6 +20,7 @@ class User(Base):
 	
 	user_info_table = relationship("UserInfo", back_populates='user_table')
 	login_user_table = relationship("LoginUser", back_populates='user_table')
+	schedule_user_table = relationship("ScheduleUser", back_populates='user_table')
 
 
 class UserInfo(Base):
