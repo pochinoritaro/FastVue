@@ -12,7 +12,7 @@ services:
     tty: true
     volumes:
       - ./frontend/app:/app
-    
+
   back:
     container_name: backend
     build:
