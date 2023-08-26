@@ -10,6 +10,10 @@ def create_db():
 def get_user(user_name, password):
 	pass
 
+def read_userdata(name):
+	data = session.query(User).filter(User.user_name==name).first()
+	return data
+
 @auto_commit
 def set_user(user_name, password):
 	if varidate_password(password):
