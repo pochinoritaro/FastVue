@@ -29,6 +29,7 @@ class UserInfo(Base):
 	info_id = Column(Integer, primary_key=True)
 	user_id = Column(Integer, ForeignKey('user_table.user_id'))
 	
+ 
 	first_name = Column(String(255))
 	last_name = Column(String(255))
 	
@@ -36,4 +37,3 @@ class UserInfo(Base):
 	imfo_update_at = Column(Timestamp, default=datetime.now())
 	
 	user_table = relationship("User", back_populates='user_info_table')
-
