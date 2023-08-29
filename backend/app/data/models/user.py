@@ -29,7 +29,7 @@ class UserInfo(Base):
 	info_id = Column(Integer, primary_key=True)
 	user_id = Column(Integer, ForeignKey('user_table.user_id'))
 	
- 
+
 	first_name = Column(String(255))
 	last_name = Column(String(255))
 	
